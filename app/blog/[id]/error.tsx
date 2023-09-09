@@ -17,9 +17,6 @@ export default function Error({
         Try again
       </button>
       <br />
-      <Link href="/blog" className="hover:underline">
-        Back to post page
-      </Link>
     </div>
   );
 }
