@@ -21,8 +21,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </Link>
             </li>
             <li>
-              <Link href="/about" className="hover:underline">
-                About
+              <Link href="/workspace" className="hover:underline">
+                Workspace
               </Link>
             </li>
             <li>
