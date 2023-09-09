@@ -1,4 +1,7 @@
-export default function Page() {
+export default async function Page() {
+  // simulate loading notes
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+
   return (
     <div>
       <p>Notes</p>

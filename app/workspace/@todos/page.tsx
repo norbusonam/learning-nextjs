@@ -1,7 +1,10 @@
 import { TodoItem } from "./todo";
 import { TODOS } from "./todo-data";
 
-export default function Page() {
+export default async function Page() {
+  // simulate loading todos
+  await new Promise((resolve) => setTimeout(resolve, 2000));
+
   return (
     <div>
       <p>Todos</p>
