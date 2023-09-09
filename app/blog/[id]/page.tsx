@@ -7,7 +7,11 @@ export default async function Page({ params }: { params: { id: string } }) {
 
   const blogPost = BLOG_POSTS.find((post) => post.id === params.id);
 
-  return blogPost ? (
+  if (!blogPost) {
+    throw new Error("Blog post not found");
+  }
+
+  return (
     <div>
       <Link href="/blog" className="hover:underline">
         Back
@@ -17,7 +21,5 @@ export default async function Page({ params }: { params: { id: string } }) {
         <p>{blogPost.content}</p>
       </article>
     </div>
-  ) : (
-    <p>Post not found</p>
   );
 }

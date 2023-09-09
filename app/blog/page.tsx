@@ -14,6 +14,13 @@ export default async function Page() {
           </Link>
         </li>
       ))}
+
+      {/* intentional error causing non-existent blog post */}
+      <li>
+        <Link href={`/blog/d`} className="hover:underline">
+          Blog 4
+        </Link>
+      </li>
     </ul>
   );
 }
