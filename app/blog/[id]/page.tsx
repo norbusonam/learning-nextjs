@@ -1,8 +1,10 @@
-import { useRouter } from "next/navigation";
 import { BLOG_POSTS } from "../blog-data";
 import Link from "next/link";
 
-export default function Page({ params }: { params: { id: string } }) {
+export default async function Page({ params }: { params: { id: string } }) {
+  // simulate api request to get blog posts
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+
   const blogPost = BLOG_POSTS.find((post) => post.id === params.id);
 
   return blogPost ? (

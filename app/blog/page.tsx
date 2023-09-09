@@ -1,7 +1,10 @@
 import Link from "next/link";
 import { BLOG_POSTS } from "./blog-data";
 
-export default function Page() {
+export default async function Page() {
+  // simulate api request to get blog posts
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+
   return (
     <ul>
       {BLOG_POSTS.map((post) => (
