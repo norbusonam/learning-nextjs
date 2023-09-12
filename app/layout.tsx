@@ -30,6 +30,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 Blog
               </Link>
             </li>
+            <li>
+              <Link href="/counter" className="hover:underline">
+                Counter
+              </Link>
+            </li>
           </ul>
         </nav>
         {children}
